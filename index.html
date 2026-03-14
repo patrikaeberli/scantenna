@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scantenna</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/175005826?v=4&size=64">
+<link rel="stylesheet" href="leaflet/dist/leaflet.css">
+<script src="leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1 id="title"></h1>
+
+  <div class="card">
+    <h3 id="languagetitle"></h3>
+    <p id="languageinfo"></p>
+    <select id="lang"></select>
+    <span id="langwarning" style="color:red; margin-left:10px; font-weight:600;"></span>
+  </div>
+
+  <div class="card">
+    <h3 id="locationtitle"></h3>
+    <p id="locationinfo"></p>
+    <button id="scanlocation" onclick="useLocation()" class="btn"></button>
+
+    <p id="addressguide"></p>
+    <div class="row">
+      <input id="address" placeholder="Bundesplatz 3, 3003 Bern">
+      <button id="searchaddress" onclick="searchAddress()" class="btn"></button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 id="scantitle"></h3>
+    <p id="scaninfo"></p>
+    <div class="row">
+      <label id="radiuslabel"></label>
+      <input id="radius" value="1">
+      <button id="scan" onclick="scan()" class="btn"></button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <div class="card map-card">
+    <div id="map"></div>
+  </div>
+
+  <div class="card">
+    <h3 id="antennalisttitle"></h3>
+    <table>
+      <thead>
+        <tr>
+          <th id="thdistance"></th>
+          <th id="thstation"></th>
+          <th id="thtype"></th>
+          <th id="thtechnology"></th>
+          <th id="thpower"></th>
+          <th id="thlimit"></th>
+          <th id="thapproval"></th>
+        </tr>
+      </thead>
+      <tbody id="antennalist"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="js/translations.js"></script>
+<script src="js/map.js"></script>
+<script src="js/geo.js"></script>
+<script src="js/data.js"></script>
+<script src="js/scanner.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
